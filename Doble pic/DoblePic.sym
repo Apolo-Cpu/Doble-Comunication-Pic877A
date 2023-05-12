@@ -1,0 +1,114 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+006     kbd
+006     lcd
+006     lcdlat
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     kbd_getc.kbd_call_count
+021.0   kbd_getc.kbd_down
+022     kbd_getc.last_key
+023     kbd_getc.col
+024     MAIN.key
+025     MAIN.received
+026     lcd_init.i
+026     kbd_getc.kchar
+026     @PSTRINGCN7_651.P1
+026     @PSTRINGC7_651.@SCRATCH1
+027     kbd_getc.row
+027-02A lcd_init.LCD_INIT_STRING
+027     @PSTRINGC7_651.@SCRATCH2
+027     @PSTRINGCN7_651.@SCRATCH1
+028     kbd_getc.@SCRATCH1
+028     @PSTRINGC7_651.@SCRATCH3
+028     @PSTRINGCN7_651.@SCRATCH2
+029     @PSTRINGC7_651.@SCRATCH4
+029     @PSTRINGCN7_651.@SCRATCH3
+02A     lcd_putc.c
+02A     @PSTRINGCN7_651.@SCRATCH4
+02B     @delay_ms1.P1
+02B     lcd_gotoxy.x
+02B     lcd_init.@SCRATCH1
+02C     lcd_gotoxy.y
+02D     lcd_gotoxy.address
+02E     lcd_gotoxy.@SCRATCH1
+02F     lcd_send_byte.address
+030     lcd_send_byte.n
+031     lcd_read_byte.low
+031     lcd_send_byte.@SCRATCH1
+032     lcd_read_byte.high
+032     lcd_send_nibble.n
+033     lcd_read_byte.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+086     lcdtris
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+F83     portd
+
+ROM Allocation:
+000004  KEYS.call
+000008  KEYS.data
+000018  @const680.call
+000022  @const683.call
+00002C  @const687.call
+000036  @delay_ms1
+00004B  lcd_send_nibble
+00005D  lcd_read_nibble
+000063  lcd_send_byte
+00006B  lcd_read_byte
+0000BE  lcd_init
+000103  kbd_init
+000106  lcd_gotoxy
+000118  lcd_putc
+000144  @PSTRINGC7_651
+00019C  kbd_getc
+000205  @goto10680
+00020D  @PSTRINGCN7_651
+000264  MAIN
+000264  @cinit1
+000276  @cinit2
+
+Project Directory:
+    W:\Doble pic\
+
+Project Files:
+    DoblePic.c                                              [12-may-23 18:44  CRC=DED85376]
+    C:\Program Files (x86)\PICC\Devices\16F877A.h           [12-nov-13 14:35  CRC=81334808]
+    lcdm.c                                                  [12-abr-23 16:50  CRC=C3836F8F]
+    KBD4X4.c                                                [12-abr-23 16:50  CRC=AFA827EF]
+
+Source signature=82DF5AEB
+
+Units:
+    DoblePic (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   DoblePic.xsym
+    Errors:      DoblePic.err
+    Ext Symbols: DoblePic.esym
+    INHX8:       DoblePic.hex
+    Symbols:     DoblePic.sym
+    List:        DoblePic.lst
+    Debug/COFF:  DoblePic.cof
+    Project:     DoblePic.ccspjt
+    Call Tree:   DoblePic.tre
+    Statistics:  DoblePic.STA
